@@ -42,7 +42,15 @@ const getApp = (req,res) =>{
     res.send(apps[req.params.id])
 }
 
+const vegetarian = (req,res) => {
+    const vegetarianFood = apps.filter((apps) => apps.isVegetarian === true)
+
+    res.send(vegetarianFood)
+    
+}
+
 module.exports = {
     getApps,
-    getApp
+    getApp,
+    vegetarian
 }

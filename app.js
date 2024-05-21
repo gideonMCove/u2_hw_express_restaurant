@@ -14,7 +14,7 @@ app.listen(PORT, ()=> {
     console.log(`listening at port ${PORT}`)
 })
 app.get('/', (req, res) => {
-    res.send('hip hip')
+    res.send('Super Cool and Also Unbelievebly Tasty While Being Incredibly Cheap')
 })
 
 app.get('/apps', appController.getApps)
@@ -38,4 +38,12 @@ app.get('/specials', specialsController.getSpecials)
 app.get('/specials/:id', specialsController.getSpecial)
 
 app.get('/specialsvegetarian', specialsController.vegetarian)
+
+app.get('/kidsmenuvegetarian', kidsMenuController.vegetarian)
+
+app.get('/entreesvegetarian', entreeController.vegetarian)
+
+app.get('/dessertsvegetarian', dessertController.vegetarian)
+
+app.get('/appsvegetarian', appController.vegetarian)
 

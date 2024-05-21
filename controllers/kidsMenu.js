@@ -25,7 +25,15 @@ const getKidMenu = (req,res) =>{
     res.send(kidsMenu[req.params.id])
 }
 
+const vegetarian = (req,res) => {
+    const vegetarianFood = kidsMenu.filter((kidsMenu) => kidsMenu.isVegetarian === true)
+
+    res.send(vegetarianFood)
+    
+}
+
 module.exports = {
     getKidsMenu,
-    getKidMenu
+    getKidMenu,
+    vegetarian
 }

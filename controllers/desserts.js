@@ -30,7 +30,15 @@ const getDessert = (req,res) =>{
     res.send(desserts[req.params.id])
 }
 
+const vegetarian = (req,res) => {
+    const vegetarianFood = desserts.filter((dessert) => dessert.isVegetarian === true)
+
+    res.send(vegetarianFood)
+    
+}
+
 module.exports = {
     getDesserts,
-    getDessert
+    getDessert,
+    vegetarian
 }
