@@ -73,12 +73,15 @@ const getSpecial = (req,res) =>{
 //     }
     
 // }
-// const vegetarianFood = specials.filter(special => special.isVegetarian === true)
+const vegetarian = (req,res) => {
+    const vegetarianFood = specials.filter((special) => special.isVegetarian === true)
 
-// res.send(vegetarianFood)
-
+    res.send(vegetarianFood)
+    res.send("hip hip")
+}
 module.exports = {
     getSpecials,
     getSpecial,
-    // vegetarian
+    vegetarian
+    
 }

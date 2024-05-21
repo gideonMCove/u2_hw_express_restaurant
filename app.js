@@ -37,4 +37,5 @@ app.get('/specials', specialsController.getSpecials)
 
 app.get('/specials/:id', specialsController.getSpecial)
 
-// app.get('/specials/vegetarian', specialsController.vegetarian)
+app.get('/specialsvegetarian', specialsController.vegetarian)
+
